@@ -6,18 +6,18 @@
 */
 
 basic.clearScreen()
-basic.pause(1000)
-
-let temperature: number
 basic.showIcon(IconNames.Happy)
 
+let temperatureC : number
+let temperatureK : number
 
 input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
     basic.pause(500)
 
-    temperature = input.temperature()
-    basic.showNumber(temperature)
+    temperatureC = input.temperature()
+    basic.showString ("The temperature in Kelvin is")
+    basic.showNumber(temperatureC * 274.15)
 
     basic.clearScreen()
     basic.pause(500)
